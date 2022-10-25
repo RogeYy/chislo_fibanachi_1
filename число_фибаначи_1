@@ -1,0 +1,44 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+	int N, first_namber, doble_namber, zap_a, count = 0, count_T_F;
+	first_namber = 0;
+	doble_namber = 1;
+	cin >> N;
+
+	do {
+
+		count += 1;
+		zap_a = first_namber;
+		first_namber = doble_namber;
+		doble_namber += zap_a;
+
+		if (N != first_namber && N < first_namber) {
+
+			count_T_F = 0;
+			break;
+		}
+
+		else {
+
+			count_T_F = 1;
+
+		}
+
+
+	} while (N != first_namber);
+
+	if (count_T_F == 0) {
+
+		cout << 0;
+	}
+
+	else {
+
+		cout << 1 << endl << count;
+
+	}
+
+
+}
